@@ -1,0 +1,458 @@
+.equContainer{
+  width: 96%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.equGroupContainer{
+}
+.well{
+  padding: 20px;
+  border: 1px solid #EBEEF5;
+  border-radius: 5px;
+  background: #F2F6FC;
+  width: 50%;
+  margin: auto;
+  min-width: 450px;
+  position: relative;
+}
+
+.euqItem{
+  border: 1px solid #EBEEF5;
+  padding: 15px;
+  width: auto;
+  min-height: 50px;
+  display: inline-block;
+  border-radius: 5px;
+  background: #67C23A;
+  color: #fff;
+}
+
+.euqItem2{
+  border: 1px solid #EBEEF5;
+  padding: 15px;
+  width: auto;
+  min-height: 50px;
+  display: inline-block;
+  border-radius: 5px;
+  background: #F56C6C;
+  color: #fff;
+}
+
+.euqGroup{
+  width: 400px;
+  height: 200px;
+  position: relative;
+  margin:auto;
+}
+
+.euqGroup2 {
+  //margin: 20px;
+}
+
+.host {
+  //margin-left: 150px !important;
+}
+
+.station {
+  margin-left: 120px !important;
+}
+
+.rowLine{display: inline-block;width: 50px; border-bottom: 1px solid #aaa;}
+.columnLine{border-left: 1px solid #aaa;width: 1px; height: 20px;margin: auto;  }
+
+.rowLine2{
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: 1px;
+  border-top: 1px solid #aaa;
+}
+
+.columnLine2{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  left:50px;
+  width: 1px;
+  height: 100px;
+}
+.columnLine3{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  right:50px;
+  width: 1px;
+  height: 100px;
+}
+
+.columnLine4{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  bottom: 0;
+  left:50px;
+  width: 1px;
+  height: 100px;
+}
+
+.columnLine5{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  bottom: 0;
+  right:50px;
+  width: 1px;
+  height: 100px;
+}
+.columnLine6{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  width: 1px;
+  height: 120px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.columnLine7{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  width: 1px;
+  height: 120px;
+  left: 50%;
+  margin-left: 10px;
+}
+.groupRowLine{
+  position: absolute;
+  top:50%;
+  left: 40px;
+  width: 300px;
+}
+
+
+.groupColumnLine{
+  position: absolute;
+  top:50px;
+  left: 50%;
+  height: 100px;
+}
+
+.masterServer{
+  position: absolute;
+  left:0;
+  top: 50%;
+  margin-top: -20px !important;
+}
+
+.spareServer{
+  position: absolute;
+  right:0;
+  top: 50%;
+  margin-top: -20px!important;
+
+}
+
+.upsPower{
+  position: absolute;
+  top:10px;
+  left:50%;
+  margin-left: -45px!important;
+}
+
+.lightningProtection{
+  position: absolute;
+  bottom:10px;
+  left:50%;
+  margin-left: -56px!important;
+}
+
+
+
+.splitLine{
+  width: 90%;
+  margin: 30px auto;
+  color: #777;
+  text-align: left;
+
+}
+
+.splitLine1{
+  width: 40%;
+  height: 15px;
+  background: #F2F6FC;
+  border: 1px solid #EBEEF5;
+  text-align: center;
+  display: inline-block;
+
+}
+
+.splitLine2{
+  display: inline-block;
+  width: 40%;
+  height: 15px;
+  background: #F2F6FC;
+  border: 1px solid #EBEEF5;
+  float: right;
+}
+
+.wellTop{
+  font-size: 20px;
+  float: right;
+  position: relative;
+  margin-top: -40px !important;
+}
+
+.wellBottom{
+  font-size: 20px;
+  float: right;
+  position: relative;
+  margin-top: 40px !important;
+}
+
+.splitLine11{
+  border: 1px solid #E4E7ED;
+  width: 30px;
+  margin-top: 23px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  float: left;
+}
+
+.shadow{
+  margin: auto;
+  width: 30%;
+}
+.wellBottomContainer{
+  padding: 20px;
+  border: 1px solid #e9e9eb;
+  border-radius: 5px;
+  background: #EBEEF5;
+  width: 80%;
+  min-height: 600px;
+  margin: 30px auto;
+  min-width: 580px;
+  position: relative;
+
+}
+.wellBottomStation1{
+  position: absolute;
+  right: 100px;
+}
+.wellBottomStation2{
+  position: absolute;
+  right: 100px;
+  top: 150px;
+}
+.wellBottomStation3{
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}
+.wellBottomStation4{
+  position: absolute;
+  left: 100px;
+}
+.wellBottomStation31{
+  position: absolute;
+  left: 100px;
+  top: 300px;
+}
+
+.wellBottomStation32{
+  position: absolute;
+  left: 100px;
+  top: 450px;
+}
+
+.wellBottomStation21{
+  position: absolute;
+  right: 100px;
+  top: 450px;
+}
+
+.wellBottomStation22{
+  position: absolute;
+  right: 10px;
+  top: 330px;
+}
+
+.wellBottomStation23{
+  position: absolute;
+  right: 300px;
+  top: 330px;
+}
+
+
+.wellBottomStation24{
+  position: absolute;
+  right: 100px;
+  top: 230px;
+}
+
+
+.splitLine21{
+  border: 1px solid #aaa;
+  position: absolute;
+  right: 170px;
+  top: 280px;
+  width: 100px;
+  margin-top: 23px;
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+}
+
+.splitLine23{
+  border: 1px solid #aaa;
+  position: absolute;
+  right: 235px;
+  top: 280px;
+  width: 100px;
+  margin-top: 23px;
+  transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+}
+
+.splitLine22{
+  border: 1px solid #aaa;
+  position: absolute;
+  right: 130px;
+  top: 380px;
+  width: 150px;
+  margin-top: 23px;
+  transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+}
+
+.splitLine24{
+  border: 1px solid #aaa;
+  position: absolute;
+  right: 220px;
+  top: 380px;
+  width: 150px;
+  margin-top: 23px;
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+}
+
+
+.columnLine8{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  right: 260px;
+  top:50px;
+  width: 1px;
+  height: 140px;
+}
+.columnLine9{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  left: 260px;
+  top:50px;
+  width: 1px;
+  height: 140px;
+}
+.columnLine31{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  left: 260px;
+  top:200px;
+  width: 1px;
+  height: 140px;
+}
+.columnLine32{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  left: 260px;
+  top:350px;
+  width: 1px;
+  height: 140px;
+}
+.columnLine33{
+  border-left: 1px solid #aaa;
+  position: absolute;
+  right: 255px;
+  top:200px;
+  width: 1px;
+  height: 60px;
+}
+.rowLine3{
+  width: 60%;
+  height: 1px;
+  border-top: 1px solid #aaa;
+  position: absolute;
+  left:20%;
+  top: 179px;
+}
+
+.rowLine4{
+  width: 60%;
+  height: 1px;
+  border-top: 1px solid #aaa;
+  position: absolute;
+  left:20%;
+  top: 49px;
+}
+.turnLine{
+  width: 30%;
+  height: 150px;
+  border-right: 1px solid #aaa;
+  //border-bottom: 1px solid #aaa;
+  position: absolute;
+  left: 20%;
+  top: -100px;
+}
+
+.turnLine2{
+  width: 30%;
+  height: 150px;
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  position: absolute;
+  right: 20%;
+  margin-right: -10px !important;
+  top: -100px;
+}
+.wellTerminal{
+  position: absolute;
+  left: 30px;
+  top:100px;
+}
+.wellTerminal2{
+  position: absolute;
+  right: 30px;
+  top:100px;
+}
+.euqTerminal{
+  writing-mode:vertical-lr;
+}
+.euqTerminal2{
+  writing-mode:vertical-lr;
+}
+.wifiImg{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top:-20px;
+}
+.wifiImg2{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top:-20px;
+  margin-left: -70px;
+  transform: rotateY(180deg)
+}
+
+.euqLegend{
+  position: absolute;
+  top:150px;
+  left: 20px;
+}
+
+.wellBottomStation5{
+  position: absolute;
+  top:20px;
+  left:50%;
+  margin-left: -30px !important;
+}

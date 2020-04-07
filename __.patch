@@ -1,0 +1,7 @@
+Index: src/views/layout/components/Navbar.vue
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/views/layout/components/Navbar.vue	(date 1545095476000)
++++ src/views/layout/components/Navbar.vue	(date 1545282384814)

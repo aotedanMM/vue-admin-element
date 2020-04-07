@@ -1,0 +1,51 @@
+/** 播放录音的动画效果 **/
+@-webkit-keyframes m_voicePlay2{
+  0% {
+    background-position:0 0;
+  }
+  25% {
+    background-position:-30px 0;
+  }
+  50% {
+    background-position:-60px 0;
+  }
+  75% {
+    background-position:-90px 0;
+  }
+  100% {
+    background-position:-180px 0;
+  }
+}
+@keyframes m_voicePlay2 {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: -30px 0;
+  }
+  50% {
+    background-position: -60px 0;
+  }
+  75% {
+    background-position: -90px 0;
+  }
+  100% {
+    background-position: -180px 0;
+  }
+}
+.myVoice{width: 100%;height: auto;}
+.m_voice{width: 90%;height: auto;margin: auto;}
+.myVoice1{margin:10PX 0;color:#999999;height:50PX;background-color:#fff;border:1px solid #ddd;border-radius: 6px;max-width: 75%;min-width:25%;position: relative;float:left;}
+.m_voicePlay1{width:30PX;height:30PX;margin: 0 !important; position:absolute;left:10PX;top:8PX;background:url("../../static/img/voice.png") no-repeat ;background-size:100% 100%;}
+.m_voicePlay2{ background:url('../../static/img/yuyin.png') no-repeat 0 0;-webkit-animation:m_voicePlay2 1s steps(1) infinite;background-size:120px 30px;}
+.m_voiceTime{float: left;line-height: 20px;margin-left: 10px;font-size: 16px; }
+.s_voice{width: 90%;height: auto;margin: auto;}
+.smyVoice1{margin:10PX 0;color:#999999;height:50PX;background-color:#fff;border:1px solid #ddd;border-radius: 6px;max-width: 75%;min-width:25%;position: relative;float:left;}
+.m_voicePlay12{width:30PX;height:30PX;margin: 0 !important; position:absolute;right:10PX;top:8PX;background:url("../../static/img/voice2.png") no-repeat ;background-size:100% 100%;}
+.m_voicePlay22{ background:url('../../static/img/yuyin2.png') no-repeat 0 0;-webkit-animation:m_voicePlay2 1s steps(1) infinite;background-size:120px 30px;}
+.m_voicePlay12{transform: rotate(180deg);-ms-transform: rotate(180deg); /* IE 9 */-webkit-transform: rotate(180deg); /* Safari and Chrome */}
+.m_voicePlay22{transform: rotate(180deg);-ms-transform: rotate(180deg); /* IE 9 */-webkit-transform: rotate(180deg); /* Safari and Chrome */}
+
+
+
+

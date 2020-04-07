@@ -1,0 +1,74 @@
+.m_personTrackTimeList ul li {padding: 20px 0;color: #666;border-bottom: 1px solid #eee;}
+.m_noData{text-align: center;color: #999;padding: 20px 0;border-bottom: 1px solid #eee}
+/*系统适配多尺寸屏幕*/
+@media screen and (max-width: 1644px){
+  .m_tableTopRow2 .el-input {
+    margin: 5px 0 !important;
+    width: 150px !important;
+  }
+  .m_tableTopRow2 .el-date-editor {width: 150px !important;}
+}
+
+@media screen and (max-width: 1523px){
+  .el-date-editor.el-input__inner {
+    width: 270px !important;
+  }
+  .m_filterInput{
+    width: 150px !important;
+  }
+  .m_tableTopRow .el-input {
+    display: inline-block;
+    width: 150px !important;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 1500px){
+  .m_tableTopRow3 .el-input{width:150px !important;margin-right: 5px !important; }
+  .downHoleValue .el-button {
+    padding: 5px !important;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .m_timeFilter{
+    display: none !important;
+  }
+  .navBarItem {
+    margin-right: 5px !important;
+  }
+}
+
+@media screen and (max-width: 1282px){
+  .m_tableTopRow3 .el-input{width:120px !important;margin-right: 5px !important; }
+  #systemTime {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .el-date-editor.el-input__inner {
+    width: 200px !important;
+  }
+}
+
+@media screen and (max-width: 1230px){
+  .m_tableTopRow3 .el-input{width:100px !important;margin-right: 0 !important; }
+  .m_row1{width: 50% !important;}
+  .m_row2{width: 50% !important;}
+
+  .el-button {
+    padding: 11px 5px !important;
+    margin:5px 2px !important;
+  }
+}
+@media screen and (max-width: 1170px){
+  .navBarItem {
+    margin-right: 10px !important;
+  }
+}
+@media screen and (max-width: 1136px){
+  .navBarItem .el-button {
+    display: none;
+  }
+}

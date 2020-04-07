@@ -1,0 +1,583 @@
+//.scrollContent{min-height: 550px;}
+#printTable{display: none;text-align: center;}
+#printTable1{display: none;text-align: center;}
+#printTable2{display: none;text-align: center;}
+.printTitle{ font-size: 20px;line-height: 80px; }
+@media print {
+  .el-table td, .el-table th.is-leaf{
+    border-bottom: 1px solid #aaa ;
+  }
+  #printTable{
+    display: block;
+  }
+  #printTable1{display: block}
+  #printTable2{display: block}
+}
+//打印去除页眉页脚
+@page{
+  size: auto A4 landscape;
+  margin: 3mm;
+}
+html,body{height: 100%}
+.mapBtnGroup{z-index: 99999 !important;position: relative;}
+.m_navBar{position: fixed;top:0;z-index: 999;background: #fff;width: 100%;}
+p{margin: 0 !important;}
+ul{list-style: none;margin: 0;padding: 0;}
+//.el-popup-parent--hidden{overflow: auto !important;}
+.el-collapse{min-height: 800px;}
+.app-container2{padding: 0;margin: 0;}
+.el-card__body{padding: 0 !important;}
+.el-message{z-index: 9999999 !important;}
+.m_onlineStatus{display: inline-block;line-height: 50px;}
+.m_cardBodyContent{width: 100%;height:50px;line-height: 50px;padding:0 20px }
+.m_deleteVoiceBtn{float: right;margin-top: 8px;}
+.m_gasInfoTop{width: 100%;min-height: 50px;max-height: 60px; overflow: hidden}
+.m_gasInfoBottom{height:20px;}
+
+.m_timeSelect{margin-bottom: 20px; }
+
+.m_timeSelect .el-input {width: 200px;display: inline-block;margin-right: 5px;}
+.m_validateSpan{color: #f56c6c;font-size: 12px;position: absolute;top: 100%;left: 0;margin-top: -10px;}
+.pagination-container{margin-top: 10px;}
+.m_organizationSelect{display: inline-block}
+.login-form{min-width: 300px}
+.el-message { top: 10vh !important;}
+.app-container{min-width: 700px;}
+.m_staffTable {padding-bottom: 40px !important;margin-top: 130px;}
+.no-data-text{color: #999 !important;font-size: 14px !important;position: relative; z-index: 999;}
+.no-data-text active{color: #999 !important;font-size: 14px !important;position: relative; z-index: 999;}
+.el-notification {white-space:pre !important; }
+.el-notification right{white-space:pre !important; }
+.infinite-list-wrapper{height: 300px;overflow: auto;}
+.infinite-list-wrapper ul{height: 300px;overflow: auto;}
+.list-item{height: 50px;background: #f2f3f6;}
+.m_scrollContent{height: 300px;overflow: hidden;}
+.m_historyLegendTitle{display: inline-block;float: right;margin-right: 15px !important;}
+.m_loadUlContainer{position:absolute;width:24%;height: 600px; top:50px;left: 6%;margin-left: -6px; overflow: hidden !important;}
+.m_loadUl{position:absolute;width:100%;height: 600px;padding-bottom: 50px; left:6px; overflow: auto}
+.m_callBtn{border: 1px solid #333;background:#fff ;color: #F56C6C;}
+.el-scrollbar__view .el-menu .menu-wrapper:last-child {padding-bottom: 70px}
+//------------------------数据备份-----------------------------//
+.m_dataBackup{padding:50px 0;}
+  //------------------------紧急呼叫-----------------------------//
+.m_emergencyCall{font-size: 25px;font-weight: bold;}
+.voiceCallM2{width: 100%;height: 140px;text-align: center;}
+.voiceCallM2 img{margin-top: 20px;height: 90px;}
+.voiceCallB2 .el-button{text-align: center}
+.answerBtn{width: 100px;margin-left:80px;}
+//------------------------添加自定义图标-----------------------------//
+// 设定井口基站
+.addWellheadIcon{background: url("../../static/ButtonIcons/wellhead.svg") center no-repeat;background-size: cover;speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;vertical-align: baseline;display: inline-block;-webkit-font-smoothing: antialiased;margin-right: 5px;}
+.addWellheadIcon:before{content: "替";margin-right:2px;font-size: 12px;visibility: hidden;}
+// 设定考勤基站
+.addAttendanceIcon{background: url("../../static/ButtonIcons/attendance.svg") center no-repeat;background-size: cover;speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;vertical-align: baseline;display: inline-block;-webkit-font-smoothing: antialiased;margin-right: 5px;}
+.addAttendanceIcon:before{content: "替";margin-right:2px;font-size: 12px;visibility: hidden;}
+// 设定上传频率
+.addFrequencyIcon{background: url("../../static/ButtonIcons/frequency.svg") center no-repeat;background-size: cover;speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;vertical-align: baseline;display: inline-block;-webkit-font-smoothing: antialiased;margin-right: 5px;}
+.addFrequencyIcon:before{content: "替";margin-right:2px;font-size: 12px;visibility: hidden;}
+// 设定气体标准
+.addStandardIcon{background: url("../../static/ButtonIcons/standard.svg") center no-repeat;background-size: cover;speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;vertical-align: baseline;display: inline-block;-webkit-font-smoothing: antialiased;margin-right: 5px;}
+.addStandardIcon:before{content: "替";margin-right:2px;font-size: 12px;visibility: hidden;}
+
+// 显示WIFI探针
+.showWifiProbe{background: url("../../static/ButtonIcons/wifiProbe.svg") center no-repeat;background-size: cover;speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;vertical-align: baseline;display: inline-block;-webkit-font-smoothing: antialiased;margin-right: 5px;}
+.showWifiProbe:before{content: "替";margin-right:2px;font-size: 12px;visibility: hidden;}
+
+// 隐藏WIFI探针
+.hideWifiProbe{background: url("../../static/ButtonIcons/hideWifiProbe.svg") center no-repeat;background-size: cover;speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;vertical-align: baseline;display: inline-block;-webkit-font-smoothing: antialiased;margin-right: 5px;}
+.hideWifiProbe:before{content: "替";margin-right:2px;font-size: 12px;visibility: hidden;}
+.m_selectStation{width: 150px;margin-right: 5px; }
+.m_selectStation .el-input{width: 150px !important;}
+//------------------------navBar----------------------  -------//
+.navBarItem{display: inline-block; margin-right: 2%;}
+.navBarItem .el-button{color: #666 !important;}
+.breadcrumbContainer{width: 30%; background: transparent !important;padding: 0 20px 0 10px; position: relative !important; top: 60px;z-index: 99;}
+.navBarItem .el-badge{line-height: 60px !important;}
+.navBarRight{text-align: right;right: 0;position: fixed; }
+.m_navBarRow{padding: 0 20px 0 0 ;}
+//------------------------搜索部分通用样式-----------------------------//
+.m_tableTopRow{top:40px;  min-width: 700px; }
+.m_tableTopRow .el-input{display: inline-block;width:200px;margin-right: 5px; }
+.m_tableTopRow .el-date-editor{margin-right: 5px}
+.m_tableTopRow .el-button{ padding: 11px;display: inline-block;margin: 5px}
+.m_tableTopRow .el-input__prefix{height: 40px;}
+.m_tableTopRow .el-form{margin: 5px;}
+.m_tableTopRow .el-form-item{margin: 0;}
+.m_tableTopRow .el-form-item__content .el-button{margin: 0}
+.m_tableTopRowRight{float: right;text-align: right;}
+
+.m_tableTopRow2{top:40px; min-width: 700px;}
+.m_tableTopRow2 .el-input{width: 200px; display: inline-block;margin: 5px; }
+.m_tableTopRow2 .el-date-editor {width: 200px !important;}
+.m_tableTopRow2 .el-button{ padding: 11px;display: inline-block;margin: 5px}
+.m_tableTopRow2 .el-input__prefix{height: 40px;}
+
+.m_tableTopRow3{ top:40px; min-width: 700px;margin:0 20px 0 80px; z-index: 9;}
+.m_tableTopRow3 .el-input{display: inline-block;width:200px;margin-right: 10px; }
+.m_tableTopRow3 .el-button{display: inline-block;margin: 5px 0; padding: 11px; }
+.m_tableTopRow3 .el-input__prefix{height: 40px;}
+.m_tableTopRow5{  top:40px; width: 300px;float: right; padding:10px 20px 0 0 ; z-index: 9;text-align: right; }
+.m_tableTopRow4{  min-width: 700px; z-index: 9 }
+.m_tableTopRow4 .el-input{display: inline-block;width:200px;margin-right: 10px; }
+.m_tableTopRow4 .el-button{display: inline-block;margin: 5px; padding: 11px; }
+.m_tableTopRow4 .el-input__prefix{height: 40px;}
+.m_tableTop .el-input{width: 200px;margin-right: 10px; }
+.m_tableTop .el-button{margin-right: 10px; }
+.m_tableTopRow6{ min-width: 700px; }
+.m_tableContent{margin-top: 60px;}
+.m_tableContent2{margin-top: 40px;}
+.m_tableContent3{margin-top: 110px;}
+.m_tableContent4{margin-top:  12px;}
+.m_tableContent5{margin-top: 120px;}
+//.m_timePick{float: right;}
+
+//.m_radioGroup{ display: inline-block; overflow: hidden;margin: 5px 10px 0 0 ; }
+.m_radioGroup{ display: inline-block;position: relative;top:15px;  }
+.m_radioGroup .el-radio{display: block;height: 20px;overflow: hidden;margin: 0 !important;}
+.m_timeFilter{display: inline-block }
+//------------------------表单通用样式-----------------------------//
+.el-dialog{min-width: 480px;}
+.m_form{margin-left: 30px;}
+//.m_form span{margin-left: 5px;color: #999}
+.m_form span{color: #999}
+.m_form .el-input{width: 250px}
+.m_form .el-textarea {width: 250px }
+.m_form .el-input-number{width: 250px}
+.m_inputUnit{margin-left: 5px;color: #999}
+.m_formInput{width: 200px}
+.m_form .el-date-editor.el-input{width: 250px}
+//------------------------顶部搜索部门通用样式-----------------------------//
+.m_topFilter{width: 100%;margin-bottom: 20px;}
+.m_topFilter .el-input { width: 200px;display: inline-block; }
+.m_topFilter .el-button {margin-left: 15px;}
+.filter-container .el-input {width: 200px;display: inline-block;margin-right: 5px}
+.filter-container .el-button{padding: 11px;display: inline-block;margin: 5px}
+//------------------------登录-----------------------------//
+.login-container{background: url('../../static/img/bg2.png')no-repeat !important; background-size: 100% 100% !important;}
+.title{line-height: 60px}
+.m_loginBtn{width:100%;color: #2374f2;background: rgba(255,255,255,0.85);font-size: 16px;font-weight: bold }
+//------------------------语音对话框修改-----------------------------//
+.voiceMain{width: 100%;height: auto;overflow: auto; margin: auto;}
+.voiceMain ul li{width: 100%;}
+.voiceMain ul {overflow:auto;margin-right: -6px;}
+.voiceMain2{width: 90%;height: auto;overflow:hidden;margin: auto}
+.el-header{height: 50px !important;}
+.el-header, .el-footer {color: #333;text-align: left;padding: 0 !important;}
+.el-footer{height: 130px !important; }
+.el-aside {width: 30% !important;color: #333;min-width: 190px !important; }
+.el-main {width: 100%;color: #333;padding: 0 !important;}
+.el-container{height: 100% !important;}
+body > .el-container {margin-bottom: 40px;height:100%;}
+.item{line-height: 30px;}
+.el-badge__content{border: none !important;}
+.el-badge__content.is-fixed{right: 5px}
+.m_phoneListTime{float: right;color: #999;font-size: 12px;margin-right: 10px !important;}
+.scrollContent2{min-height: 650px;}
+.scrollWrap2{position:absolute;width:24%;top:50px; bottom:20px;left: 6%;}
+.m_voiceMenu{width: 55%; border-radius: 3px;}
+.m_voiceMenu1{ display: block;margin:30px auto;width: 50% }
+.m_windowHeader{height: 50px;background: #f5f6f7;border-bottom: 1px solid #eee !important; }
+.m_hangUpBtn{position: absolute;bottom: 15px;right: 15px;color: #666;border: 1px solid #ddd}
+//------------------------通讯录-----------------------------//
+.closeDialog{float: right;padding:10px;font-size: 15px }
+//.m_dialogContent222{position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.5);z-index:2000;}
+.m_dialogContent .el-dialog{width: 50%;height: 70%;}
+.m_dialogContent .el-dialog__header{width: 50%; position: fixed;z-index: 9999;top:15vh;}
+.m_dialogContent .el-dialog__headerbtn{top:10px !important;right: 10px !important;}
+.m_dialogContent .el-dialog__body{width: 100%;height: 100%;overflow: auto;padding: 0!important;}
+.phoneBookList{width: 82%;height: 100%; padding: 10px 5px;float: right; color: #333;background: #f5f6f7; }
+.el-input__inner{outline: none; }
+.voiceDialog{width: 50%;height:70%;position: fixed;left:25%;top:15vh; background: #f5f5f5;border-radius: 5px;z-index: 99999}
+.voiceDialog .el-dialog{width: 50% !important;height: 70%; }
+.voiceDialog .el-dialog__header{padding: 0 !important;}
+.voiceDialog .el-dialog__body{ padding: 0 !important; height: 100%;}
+.voiceDialogLeft{width: 18%;height: 100%;background: #409eff;color: #fff; float: left;text-align: center;padding: 20px 0 10px 0; }
+.voiceDialogCenter{width:82%;height: 100%;float: left;background: #f0f0f0; }
+.voiceDialogRight{width: 100%;height: 100%;float: left;border-radius: 5px 0 0 5px;}
+.m_phoneListName .el-badge .el-badge__content is-fixed{right: 0 !important;top:5px !important;}
+.m_voiceCallStaff{float: left;margin-right: 5px;}
+.m_voiceCallDept{width: 200px; float: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.m_time{text-align: center;font-size: 15px;color: #666;height: 20px;margin: 20px auto !important;}
+//------------------------通讯录弹窗-----------------------------//
+.phoneListItem{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.searchBtn{float: right;width: 25%;background: #409eff;color: #fff;padding: 0 !important;height: 40px !important; }
+.searchInput{width: 73%; outline: none;border:#ccc;margin-right: 2%;}
+.m_phoneListName{color:#777; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; width: 95%;height: 60px;line-height: 60px; margin:auto !important;border-bottom: 1px solid #eee; }
+.m_phoneListName1{float: left;margin-left: 5px;color: #333;margin-right: 5px !important;}
+.m_phoneListName2{float: left;margin-left: 5px;color: #666;}
+.m_historyRecordTop{border-bottom: 1px solid #eee;padding-bottom: 10px;background: #f5f5f5;position: relative;z-index: 2;  }
+//------------------------语音聊天弹窗-----------------------------//
+.voiceCallB .el-button{margin-right: 20px;}
+.window_top{float: left; height: 50px;line-height: 50px;padding: 0 10px;position: relative;z-index: 999;color: #555}
+.window_body{height: 70%;overflow: hidden !important;}
+.window_input{height: 20%;width: 70%;position: absolute;bottom: 0;z-index: 999;background: #f0f0f0; }
+.window_button{padding: 10px 20px; border-top:1px solid #ddd;}
+.window_Point{line-height: 30px;color: #666;margin-left: 15px !important;font-size: 14px; }
+.m_calling{position: absolute;top: -100px;right:5%;}
+.callingImg{width: 40px;height: 40px;}
+.m_callingTip{text-align: center;color: #67c23a; }
+.m_gasInfo{background:#f0f0f0; width: 95%;height: 100px;margin: 10px auto;border-radius: 5px;text-align: center;padding: 10px; }
+.m_gasInfo p{padding: 0 !important;font-size: 16px; line-height: 30px;float: left;margin-left: 20px !important;}
+.m_recodeTips{float: left;color: #777;line-height: 40px;margin: 0 20px;padding: 0;}
+.m_mapShow{border: none;background: transparent;color: #f65757;}
+#m_voiceDialog a{color:#f56c6c !important;}
+.voiceCall{width: 280px;height: 280px;padding: 10px;z-index: 999999999; background: #333;position:fixed;bottom: 0;right:0;color: #fff;}
+.voiceCallT{width: 100%;height: 40px;line-height: 40px; }
+.voiceCallT img{float: right;margin-top: 15px;}
+.voiceCallM{width: 100%;height: 170px;text-align: center;}
+.voiceCallM img{margin-top: 30px;height: 90px;}
+.voiceCallB{width: 100%;height: 40px;text-align: center;}
+
+//.badge1{margin-top: 20px;margin-left:15px; float: left;}
+.badge1{margin-left:15px;}
+
+
+.badge2{float: right; right: 20px;top:20px;}
+.m_historyRecord .el-dialog {width: 30%; height: 70%;background: #f5f5f5; }
+.m_historyRecordItem{width: 100%;height: 120px;padding: 10px;border-bottom: 1px solid #eee; }
+.m_historyRecordName{float: left;line-height: 30px;font-size: 14px;color: #333;}
+.m_historyRecordTime{float: right;line-height: 30px;font-size: 14px;color: #999;}
+.m_historyRecordItem1{width: 100%;height: 30px;}
+.scrollWrap{position:absolute;width:70%;top:160px; bottom:80px; right: 0;}
+
+.scrollWrap3{position:absolute;width:90%;top:140px; bottom:20px;left: 5%; }
+
+.scrollContent3{min-height: 600px;}
+.callBtn{background: transparent;border: none;}
+.callBtn :hover{border: none;background: #fff}
+.m_window_button1{margin-left: 10px;}
+.m_window_button2{float: right}
+//------------------------定位监测-----------------------------//
+.gasTableTitle ul {display: flex;justify-content: space-between;}
+.gasTableTitle ul li {flex:1;}
+.gasTableTitle ul li:nth-child(9) {flex: 2;}
+.m_gasMonitorTable {display: flex;justify-content: space-between;}
+.m_rowItem{flex: 1;}
+.m_rowItem2{
+  flex: 2;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+//.m_rowItem2{font-size: 11px !important;line-height: 25px;  float: left;width: 30%;text-align: center;padding: 0 !important;margin:10px 0 !important;}
+.m_Map{position: fixed;top:60px;width: 100%;background: #f1f2f7;padding-top: 20px !important; }
+.fm-control-zoom{top:100px !important;}
+.staffGas .el-dialog{width:60% !important;height: 600px;overflow: auto; }
+.staffGas .el-dialog__body{padding: 30px 20px 0 20px !important;}
+.m_staffGasTable{height: 460px;overflow: auto;}
+.m_phoneBtn{background: transparent;border:none;color: #fe4317;outline: none;}
+.el-table .cell{text-align: center !important;}
+.m_tableTitle{width: 100%;height: 60px;line-height: 60px;background: #fff;position: relative; z-index: 9; overflow: hidden;margin:0 !important;padding: 0 !important;color: #606266; font-size: 16px;font-weight: 500; border-bottom : 1px solid #ebeef5;}
+.m_tableTitle ul{list-style: none;width: 100%;height: 60px; margin:0 !important;padding: 0 !important;}
+.m_tableTitle ul li{width: 8.75%; text-align: center;float: left;margin:0 !important;padding: 0 !important;}
+.m_rowItem{float: left;text-align: center; padding: 0 !important;margin:0 !important;}
+.gasTableTitle{min-width: 960px;}
+.m_gasMonitoring{border: 1px solid #ebeef5;height: 900px;overflow: hidden;  }
+//.m_gasMonitoring{border: 1px solid #ebeef5;height: 900px;}
+//.seamless-warp{height: 900px; overflow: hidden;}
+.seamless-warp{min-width: 960px;}
+.seamless-table{width: 100%;height: 100%;list-style: none;margin:0 !important;padding: 0 !important;color:#606266;}
+.seamless-row{width: 100%; font-size: 15px;height:72px;line-height: 70px; border-bottom: 1px solid #ddd;}
+.seamless-row:hover{background-color: #e1efff;}
+.m_mapLegend ul li {float: right;height:50px;}
+.m_mapLegend ul li img{height: 30px;position: relative;top:10px;}
+.m_mapLegendP{line-height: 50px;display: inline-block; color: #666;font-weight: normal;}
+//------------------------按区域监测地图页-----------------------------//
+.m_tableTop4{width: 100%;height: 80px; position: fixed;top:60px;padding-top: 20px; background: #fff;z-index: 999}
+.m_tableTop2{width: 100%;height: 80px;position: fixed;top:60px;background: #fff;z-index: 999}
+.m_tableTop{width: 100%;height: 80px;padding: 20px 0; position: fixed;top:60px;background: #fff;z-index: 999}
+.m_tableTopRight{float: right;text-align: right;}
+.downHoleValue .el-button{border: none;background: transparent;color: #409eff;font-size: 16px ;margin-left: 0; padding: 5px 15px; }
+.downHoleValue p{color: #F56C6C;display: inline-block;margin-left: 5px !important;font-weight: bold; }
+.m_floatWindowFilter{  height: 60px;border-radius: 5px;padding: 10px;}
+.m_tableTop3{ background: #ecf5ff;  border: 1px solid #b3d8ff;box-shadow: 5px 5px 5px #999;border-radius: 5px;padding:5px;}
+.downHoleDialogTop{height: 60px;}
+.downHoleDialogTop .el-input{width: 200px;margin: 5px;display: inline-block }
+.downHoleDialogTop .el-button{margin: 5px; display: inline-block}
+.m_floatRightBtn{float: right;}
+.m_downHoleStaff {height: 390px;overflow: auto;margin-top: 10px}
+.m_warnAreaTable {height: 390px;overflow: auto;margin-top: 10px}
+.m_track{height:400px;}
+.m_downHole .el-dialog{width: 60%;height: 600px; overflow: auto}
+.m_downHole .el-dialog__body{padding: 30px 20px 0 20px !important;}
+.m_trackTableTop{position: relative;}
+.trackTitle{position: absolute;left: 0;line-height: 60px;font-size: 16px; }
+.m_trackTableContent  {width: 100%; height: 340px; overflow: auto }
+//------------------------警告气体-----------------------------//
+.m_warnGas1{width:10px;height: 10px;border-radius: 4px; background: #409eff;margin-right: 10px !important;display: inline-block; }
+.m_warnGas2{width:10px;height: 10px;border-radius: 3px; background: #f2c605;margin-right: 10px !important;display: inline-block; }
+.m_warnGas3{width:10px;height: 10px;border-radius: 3px; background: #ff7d26;margin-right: 10px !important;display: inline-block; }
+.m_warnGas4{width:10px;height: 10px;border-radius: 3px; background: #ff1800;margin-right: 10px !important;display: inline-block; }
+.m_warnGas5{width:10px;height: 10px;border-radius: 3px; background: #9000ff;margin-right: 10px !important;display: inline-block; }
+
+.euqLegend1{width:10px;height: 10px;border-radius: 4px; background: #67C23A;margin-right: 10px !important;display: inline-block; }
+.euqLegend2{width:10px;height: 10px;border-radius: 4px; background: #F56C6C;margin-right: 10px !important;display: inline-block; }
+
+
+.normalGas{color: #606266;}
+.warnGas1{color: #409eff;font-weight: 600;}
+.warnGas2{color: #f2c605;font-weight: 600;}
+.warnGas3{color: #ff7d26;font-weight: 600;}
+.warnGas4{color: #ff1800;font-weight: 600;}
+.warnGas5{color: #9000ff;font-weight: 600;}
+.m_legend{ text-align: right;line-height:40px;position: fixed;right: 20px; }
+.m_legend ul li {float: left;margin-right: 10px;color: #666; }
+.m_legend2{ text-align: right;line-height:40px; }
+.m_legend2 ul li {float: left;margin-right: 10px;color: #666; }
+//------------------------警告气体-----------------------------//
+.el-table .cell{text-align: center !important;}
+.m_tabPaneTitle{position: fixed;top:80px;}
+.m_export{position: fixed !important;right: 20px !important;top:80px !important;z-index: 99;}
+.m_export2{position: fixed ;right: 20px ;top:60px ;}
+
+
+.m_logo{border-bottom: 1px solid #03a0e8;text-align: center; }
+//.m_logo span{font-size: 25px;font-weight: bold;position: absolute;top: 12px;left: 90px;color: #fff;}
+.m_logo img{height: 45px;margin: 5px auto;  }
+
+.navbar{height: 60px !important;line-height: 60px !important;}
+.el-message--warning{margin-top: 50px;}
+.m_warningGas .el-dialog__body{padding: 10px !important;}
+.m_warningGas .el-dialog__body{height: 100px;}
+.gasItem{float: left;font-size: 20px;color: red;margin: 0 10px 0 0;line-height: 30px;}
+//------------------------设备故障-----------------------------//
+.m_malfunctionLegend i {margin: 15px 5px }
+.m_malfunction{color: #F56C6C;}
+.m_intact{color: #67C23A;}
+//------------------------气体警告等级管理-----------------------------//
+.m_TabsPane1{height: 53px;line-height: 53px;}
+.m_boxCardBtn{float: right; padding: 3px 0;color: #fff;}
+.m_boxCardBtn2{position: absolute;z-index: 999;right: 10px;top:5px; color: #fff;}
+.m_standardDescT{font-size: 14px;}
+.m_standardDescR{width: 20%;height: auto;float: left }
+.m_standardDescR .el-button{float: right;margin-right: 10px;}
+.m_standardDesc{width: 80%;height: 50px;overflow: hidden; float: left}
+.m_standardDesc span{color: #999;line-height: 40px;margin-left: 15px;}
+.el-tabs--border-card{background: transparent !important; border: none;}
+.el-tabs--border-card>.el-tabs__header{background: transparent !important; border-bottom: none !important;}
+.el-tabs--border-card>.el-tabs__content{display: none}
+.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{color: #E6A23C;}
+.el-tabs--border-card>.el-tabs__header .el-tabs__item:not(.is-disabled):hover{color: #333;}
+.el-tabs--border-card>.el-tabs__header .el-tabs__item{color: #fff;}
+.gasLevelPart1{width:48%; float: left;margin-bottom: 15px;}
+.gasLevelPart2{width:48%;float: right;margin-right: 15px;margin-bottom: 15px;}
+.gasLevelPart3{width:48%;float: left;margin-bottom: 15px;}
+.gasLevelPart4{width:48%;float: right;margin-right: 15px;margin-bottom: 15px;position: relative}
+.gasLevelPart1 .el-card__header{background: #F56C6C;padding: 15px !important;}
+.gasLevelPart2 .el-card__header{background: #409EFF;padding: 15px !important;}
+.gasLevelPart3 .el-card__header{background: #67C23A;padding: 15px !important;}
+.gasLevelPart4 .el-card__header{background: #E6A23C;padding: 0px !important;}
+.gasLevelPart1 .el-card__body{padding: 10px;height: 300px;width: 100%;overflow: auto;}
+.gasLevelPart2 .el-card__body{padding: 10px;height: 300px;width: 100%;overflow: auto;}
+.gasLevelPart3 .el-card__body{padding: 10px;height: 300px;width: 100%;overflow: auto;}
+.gasLevelPart4 .el-card__body{padding: 10px;height: 300px;width: 100%;overflow: auto;}
+.el-table td, .el-table th{padding: 10px 0}
+.el-tabs__item{height: 53px !important;line-height: 53px !important;}
+.gasLevelPart4Header{position: relative;z-index: 9}
+//------------------------系统声音设置-----------------------------//
+.saveButton .el-button{margin: 20px;}
+.m_uploadBtn:focus, .m_uploadBtn:hover, .m_uploadBtn:active{color: #fff !important;}
+.m_uploadBtn{float: right; padding: 0;color: #fff;}
+.m_uploadBtn .el-button--text{color: #fff}
+.voicePart1 p{color: #fff; display: inline-block}
+.voicePart2 p{color: #fff; display: inline-block}
+.voicePart3 p{color: #fff; display: inline-block}
+.voicePart4 p{color: #fff; display: inline-block}
+.voicePart1 i{color: #fff;}
+.voicePart2 i{color: #fff;}
+.voicePart3 i{color: #fff;}
+.voicePart4 i{color: #fff;}
+.voicePart3 .el-select{width:150px;margin-left: 20px;}
+.upload-demo{width: 350px;}
+.upload-demo .el-upload {display: inline-block;margin-left: 10px;}
+.upload-demo .el-upload-list {float: left;width: 230px;height: 40px;border: 1px solid #dcdfe6 !important;border-radius: 2px;}
+.el-upload-list__item{line-height: 40px !important;margin-top: 0 !important;}
+.voicePart1{margin-bottom: 20px; }
+.voicePart2{margin-bottom: 20px; }
+.voicePart3{margin-bottom: 20px; }
+.voicePart4{margin-bottom: 20px; }
+.voicePart1 .el-card__header{background: #67C23A;padding: 15px !important;}
+.voicePart2 .el-card__header{background: #409EFF;padding: 15px !important;}
+.voicePart3 .el-card__header{background: #E6A23C;padding: 15px !important;}
+.voicePart4 .el-card__header{background: #F56C6C;padding: 15px !important;}
+.saveButton {width: 50%;margin:20px auto;text-align: center}
+.voicePart3 .el-input__inner{background: transparent;border: 1px solid #fff;color: #fff !important;}
+.voicePart3 .el-select .el-input__inner:focus{border: 1px solid #fff}
+.voicePart3 .el-input el-input--suffix is-focus{border: 1px solid #fff}
+.voicePart3 .el-select .el-input .el-select__caret{color: #fff !important; }
+//------------------------大数据分析-----------------------------//
+.m_bigDataHeaderLeft{width: 30%;line-height: 90px;font-weight: bold;font-size: 24px;padding-left: 30px; float: left;color: #52ffff;}
+.m_bigDataHeaderCenter{width:40%;float: left;color: #52ffff;text-align: center;}
+.m_bigDataHeaderCenter img{height: 30px;margin-top: 25px; }
+.m_bigDataHeaderRight{width: 30%;line-height: 90px; float: left;color: #52ffff;text-align: right;padding-right: 50px;}
+.m_bigDataHeaderRight p {display: inline;}
+.m_bigDataLeft{float: left;width: 30%;height: 100%;}
+.m_bigDataCenter{float: left;text-align: center; width: 40%;height:100%;background-size: 100% 100%;}
+.m_bigDataCenter img{width: 90%}
+.m_bigDataCenter1{color: #c4d9e8;font-size: 18px;margin: 20px auto 10px;line-height: 30px;}
+.m_bigDataCenter2{width: 50%;height:80px;line-height: 60px; text-align: center; margin: auto; }
+.m_bigDataCenter3{color: #7cd5e8;font-size: 20px; display: inline-block;font-weight: bold;}
+.m_bigDataRight{float: left;width: 30%;height: 100%;}
+.m_bigDataLeft1T{font-size: 18px;color: #65c6e7;font-weight: bold;line-height: 50px;margin-left: 6%;}
+.m_bigDataRight1T{ font-size: 18px;color: #65c6e7;font-weight: bold;line-height: 50px;margin-right: 8%;text-align: right}
+//------------------------考勤-----------------------------//
+.m_timeStandardDialog .el-dialog{margin-top: 5vh !important;}
+.m_timeStandardDialog .el-input{width: 270px !important;}
+//------------------------部门管理-----------------------------//
+.filter-container{float: left}
+.groupAdd .el-dialog{width: 35% !important;}
+.groupAdd .el-input__inner{width: 200px !important;}
+#staffAdd .el-dialog__footer{padding: 10px !important;}
+#staffAdd .el-dialog{ width: 35% !important; margin-top: 10vh !important;}
+//#staffAdd .el-form-item{margin-bottom: 15px !important;}
+#staffAdd .el-input__inner{width: 200px !important;}
+#deptGroups .el-dialog{height: 440px !important;width: 35% !important; }
+#deptGroups .el-dialog__body{padding-bottom: 60px !important;}
+.el-date-editor .el-range-separator{width: 10% !important;}
+//------------------------基站管理-----------------------------//
+.m_wellheadStation{color: #67C23A}
+.m_attendanceStation{color: #E6A23C}
+#m_dataPicker{display: inline}
+#m_dataPicker .el-date-editor .el-range-separator{width: 10% !important;}
+#m_BaseDialog .el-dialog .el-form-item__label {width: 100px !important;}
+#m_BaseDialog .el-dialog__body{padding: 0 !important;}
+#m_BaseDialog .el-dialog{margin-top: 5vh !important;width: 40% !important;}
+#m_stationDetails .el-dialog {width: 80% !important;}
+#m_dataPicker .el-select{width: 160px;}
+#m_dataPicker .el-date-editor{width: 250px;}
+//.m_BindWarnStandard .el-select el-select--medium{width: 300px !important;}
+.m_BindWarnStandard .el-select {width: 300px !important;}
+//------------------------终端管理-----------------------------//
+.importTerminal .el-dialog{width: 60% !important;}
+.importTerminal .el-table{height: 400px;overflow: auto;}
+
+.terminalDetails .el-dialog{width: 60% !important;}
+.terminalDialog .el-dialog{width: 40%;margin-top: 5vh !important;}
+.m_floatLeftBtn{float: left}
+
+//------------------------历史轨迹-----------------------------//
+.m_historyRecordTitle{display: inline-block;float: right;margin-right: 15px !important;}
+.introRight{display: inline-block;line-height: 30px;}
+.timeLeft{display: inline-block;margin-left: 5px !important;line-height: 30px;margin-right: 15px; }
+.el-collapse-item__arrow{float: left !important; margin-left: 8px !important;}
+.el-collapse-item__header{height: 50px;line-height: 50px;font-size: 16px;color: #333}
+.m_historyList li img{position: relative;left:-13px;}
+.m_historyList2 li img{position: relative;}
+.redItem{width: 100%;height: 30px;color: #F56C6C;font-size: 15px;line-height: 30px;border-left: 1px solid #ddd;padding-left: 5px;margin-left: 15px;}
+.listItem{width: 100%;height: 30px;color: #888;font-size: 15px;line-height: 30px !important;border-left: 1px solid #ddd;padding-left: 5px;margin-left: 15px;}
+.redItem span{line-height: 30px;}
+.listItem span{line-height: 30px;}
+.m_historyLegend{ width:100%;height: 60px; line-height: 60px; }
+.m_historyLegend ul {float: right}
+.m_historyLegend ul li {float: right;margin-right: 10px;color: #666; }
+//入井 井下 出井 重点区域 限制区域
+.m_history1{width:10px;height: 10px;border-radius: 3px; background: #67C23A;margin-right: 10px !important;display: inline-block; }
+.m_history2{width:10px;height: 10px;border-radius: 4px; background: #909399;margin-right: 10px !important;display: inline-block; }
+.m_history3{width:10px;height: 10px;border-radius: 3px; background: #409EFF;margin-right: 10px !important;display: inline-block; }
+.m_history4{width:10px;height: 10px;border-radius: 3px; background: #E6A23C;margin-right: 10px !important;display: inline-block; }
+.m_history5{width:10px;height: 10px;border-radius: 3px; background: #F56C6C;margin-right: 10px !important;display: inline-block; }
+
+.m_track1{color: #67C23A;}
+.m_track2{color: #909399;}
+.m_track3{color: #409EFF;}
+.m_track4{color: #E6A23C;}
+.m_track5{color: #F56C6C;}
+
+
+//------------------------人员信息管理-----------------------------//
+.allocationBaseStation .el-dialog{width: 60%; height:600px ;overflow: auto; }
+.allocationBaseStation .el-dialog__body{padding: 20px;}
+.allocationBaseStation .el-table {height: 400px; overflow: auto; }
+.allocationBaseStation .el-pagination{padding-top: 10px;}
+#staffDetails .el-dialog{width: 70% !important;}
+.el-table .cell{text-align: center !important;}
+.el-dialog{width:40%;}
+.el-dialog{width:40%;}
+.filter-container2{height:50px;}
+.filter-container2 .el-input{width: 200px;display: inline-block}
+.filter-container2 .el-button {display:inline-block}
+.m_staffBindTerminal .el-dialog{width: 60% !important;height: 600px; overflow: auto;}
+.m_staffBindTerminal .el-table {height: 410px; overflow: auto; }
+.m_staffBindTerminal .el-dialog__body{padding: 20px;}
+.m_staffBindTerminal .el-pagination{padding-top: 10px;}
+.m_batchHandle .el-dialog{width: 60%;}
+.m_batchHandle .el-table{height: 400px;overflow: auto;margin-top: 60px;}
+//------------------------组织结构管理-----------------------------//
+.container{width: 100%;padding: 20px;}
+#dialog-org .el-dialog {width: 20% !important;}
+#dialog-org .el-dialog .el-input__inner {width: 90% !important;}
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  padding-right: 3px;
+}
+.el-tree-node__content{line-height: 50px;height: 50px;}
+.custom-tree-node{border-bottom: 1px solid #eee }
+//------------------------Wifi探针-----------------------------//
+.m_probe .el-dialog{width: 60%;height:600px;}
+.m_probe .el-dialog__body{padding: 30px 20px 0 20px !important;}
+.m_probeTable{height: 460px;overflow: auto; }
+//------------------------选择区域组件-----------------------------//
+.m_areaSelectDialog .el-dialog{margin-top: 25vh !important;}
+.m_areaSelect{display: inline-block}
+//------------------------右键菜单样式-----------------------------//
+a {color: #333;}
+.right-menu {
+  position: fixed;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 999;
+  display: none;
+}
+.right-menu a {
+  width: 75px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  display: block;
+  color: #1a1a1a;
+}
+.right-menu a:hover {
+  background: #eee;
+  color: #fff;
+}
+.right-menu {
+  box-shadow: 0 0.5em 1em 0 rgba(0,0,0,.1);
+  border-radius: 1px;
+}
+a {
+  text-decoration: none;
+}
+.right-menu a {
+  padding: 2px;
+}
+.right-menu a:hover {
+  background: #F56C6C;
+}
+//------------------------滚动条-----------------------------//
+::-webkit-scrollbar {
+  z-index: 11;
+  width: 6px; }
+::-webkit-scrollbar:horizontal {
+  height: 6px; }
+::-webkit-scrollbar-thumb {
+  //border-radius: 5px;
+  width: 6px;
+  background: #b4bccc; }
+::-webkit-scrollbar-corner {
+  background: #fff; }
+::-webkit-scrollbar-track {
+  background: #fff; }
+::-webkit-scrollbar-track-piece {
+  background: #fff;
+  width: 6px; }
+
+.m_areaNum{margin: 20px auto !important;}
+.m_specialSelect{float: left;margin-left: 20px;}
+.m_filterBtnGroup{display: flex;justify-content: flex-start; flex-wrap: wrap;align-items: center; }
+
+.operateFilter{margin:40px 0 20px 0;}
